@@ -75,9 +75,9 @@
         .event-card { background: white; padding: 22px; border-radius: 6px; border-left: 4px solid var(--gold); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
         .event-card h3 { font-size: 1.15rem; color: var(--tartan-green); margin-bottom: 0.4em; }
         .event-card p { font-size: 0.96rem; margin: 0; }
-        .photo-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
-        .photo-strip img { width: 100%; height: 380px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
-        @media (max-width: 600px) { .photo-strip { grid-template-columns: 1fr; } .photo-strip img { height: 300px; } }
+        .photo-strip { display: flex; justify-content: center; margin: 30px 0; }
+        .photo-strip img { width: 100%; max-width: 500px; height: auto; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+        @media (max-width: 600px) { .photo-strip img { max-width: 100%; } }
         .service-area { background: white; padding: 24px 28px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
         .service-area-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
         .service-area-list span { background: var(--cream); padding: 8px 16px; border-radius: 20px; font-size: 0.95rem; color: var(--tartan-green); font-weight: 600; }
@@ -166,7 +166,6 @@
 
     <section>
         <div class="photo-strip">
-            <img src="kevin-formal.jpg" alt="Kevin Park playing the Great Highland Bagpipes in formal pipe band uniform">
             <img src="kevin-parade.jpg" alt="Kevin Park piping in a summer parade">
         </div>
     </section>
