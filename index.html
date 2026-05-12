@@ -52,12 +52,15 @@
             --slate: #4a4a4a;
         }
         body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.6; color: var(--charcoal); background: var(--cream); }
-        .hero { background: linear-gradient(rgba(26,26,26,0.55), rgba(26,26,26,0.75)), url('kevin-formal.jpg') center 20% / cover no-repeat; min-height: 55vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 50px 20px; }
-        .hero-inner { max-width: 700px; }
-        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; margin-bottom: 0.4em; letter-spacing: 0.02em; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
-        .hero .tagline { font-size: clamp(1.1rem, 2vw, 1.4rem); font-style: italic; color: var(--gold); margin-bottom: 1.5em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
-        .hero .location { font-size: 1.05rem; opacity: 0.95; margin-bottom: 2em; }
-        .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 1.5em; }
+        .hero { background: var(--tartan-green); color: white; text-align: center; padding: 50px 20px 40px; }
+        .hero-photo { display: flex; justify-content: center; margin-bottom: 30px; }
+        .hero-photo img { width: 100%; max-width: 500px; height: auto; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+        @media (max-width: 600px) { .hero-photo img { max-width: 100%; } }
+        .hero-inner { max-width: 700px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; margin-bottom: 0.4em; letter-spacing: 0.02em; }
+        .hero .tagline { font-size: clamp(1.1rem, 2vw, 1.4rem); font-style: italic; color: var(--gold); margin-bottom: 1.2em; }
+        .hero .location { font-size: 1.05rem; opacity: 0.95; margin-bottom: 1.6em; }
+        .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 1.2em; }
         .btn { display: inline-block; padding: 14px 28px; font-size: 1.05rem; font-family: inherit; font-weight: 600; text-decoration: none; border: 2px solid var(--gold); border-radius: 4px; transition: all 0.2s; background: var(--gold); color: var(--charcoal); }
         .btn:hover { background: transparent; color: var(--gold); }
         .btn.secondary { background: transparent; color: var(--gold); }
@@ -94,6 +97,9 @@
 <body>
 
 <header class="hero">
+    <div class="hero-photo">
+        <img src="kevin-formal.jpg" alt="Kevin Park, Scottish bagpiper, in formal dress">
+    </div>
     <div class="hero-inner">
         <h1>Kevin Park</h1>
         <div class="tagline">Scottish Bagpiper</div>
